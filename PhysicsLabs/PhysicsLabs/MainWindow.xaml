@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhysicsLabs"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="PhysicsLab" Height="480.906" Width="576.304" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
-        
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="184" Height="34" Margin="0,0,0,120" x:Name="GradeCb" DropDownClosed="GradeCb_DropDownClosed" DropDownOpened="GradeCb_DropDownOpened"/>
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="184"  Height="34" Margin="0,0,0,0" x:Name="LabCb" DropDownClosed="LabCb_DropDownClosed"/>
+        <Button Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Width="114" Margin="0,125,0,0" Height="30"/>
+        <Label HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Content="Класс" HorizontalAlignment="Center" Margin="193,149,193,269" VerticalAlignment="Center" Width="184" Height="34" MouseLeftButtonDown="GradeLb_MouseLeftButtonDown" x:Name="GradeLb" FontSize="19"/>
+        <Label HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Content="Лабараторная" HorizontalAlignment="Center" Margin="190,209" VerticalAlignment="Center" Width="190" Height="34" MouseLeftButtonDown="LabLb_MouseLeftButtonDown" x:Name="LabLb" FontSize="19"/>
     </Grid>
 </Window>

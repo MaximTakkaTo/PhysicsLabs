@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsLabs", "PhysicsLabs\PhysicsLabs.csproj", "{A5F10869-06B2-4D2A-8CA7-2E2F174FBAE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsLabs", "PhysicsLabs\PhysicsLabs.csproj", "{5AEA22C3-1FE4-4639-864E-18E2A2613548}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A5F10869-06B2-4D2A-8CA7-2E2F174FBAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5F10869-06B2-4D2A-8CA7-2E2F174FBAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5F10869-06B2-4D2A-8CA7-2E2F174FBAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A5F10869-06B2-4D2A-8CA7-2E2F174FBAE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AEA22C3-1FE4-4639-864E-18E2A2613548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AEA22C3-1FE4-4639-864E-18E2A2613548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AEA22C3-1FE4-4639-864E-18E2A2613548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AEA22C3-1FE4-4639-864E-18E2A2613548}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CE780E51-EFAF-45E3-96AC-5DEE648DB953}
+		SolutionGuid = {40E1CFD7-57B8-4CAF-A9DD-05AF7266D350}
 	EndGlobalSection
 EndGlobal
