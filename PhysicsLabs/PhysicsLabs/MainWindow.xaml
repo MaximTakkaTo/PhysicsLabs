@@ -7,10 +7,15 @@
         mc:Ignorable="d"
         Title="PhysicsLab" Height="480.906" Width="576.304" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
-        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="184" Height="34" Margin="0,0,0,120" x:Name="GradeCb" DropDownClosed="GradeCb_DropDownClosed" DropDownOpened="GradeCb_DropDownOpened"/>
-        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="184"  Height="34" Margin="0,0,0,0" x:Name="LabCb" DropDownClosed="LabCb_DropDownClosed"/>
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="184" Height="34" Margin="0,0,0,120" x:Name="GradeCb" DropDownClosed="GradeCb_DropDownClosed" DropDownOpened="GradeCb_DropDownOpened" FontSize="22" SelectionChanged="GradeCb_SelectionChanged">
+            <ComboBoxItem Content="9 класс" HorizontalAlignment="Left" Width="182" IsEnabled="False" FontSize="19"/>
+            <ComboBoxItem Content="10 класс" HorizontalAlignment="Left" Width="182" FontSize="19"/>
+            <ComboBoxItem Content="11 класс" HorizontalAlignment="Left" Width="182" IsEnabled="False" FontSize="19"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Center" FontSize="19" VerticalAlignment="Center" Width="184"  Height="34" Margin="0,0,0,0" x:Name="LabCb" DropDownOpened = "LabCb_DropDownOpened" DropDownClosed="LabCb_DropDownClosed" SelectionChanged="LabCb_SelectionChanged"/>
         <Button Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Width="114" Margin="0,125,0,0" Height="30"/>
         <Label HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Content="Класс" HorizontalAlignment="Center" Margin="193,149,193,269" VerticalAlignment="Center" Width="184" Height="34" MouseLeftButtonDown="GradeLb_MouseLeftButtonDown" x:Name="GradeLb" FontSize="19"/>
-        <Label HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Content="Лабараторная" HorizontalAlignment="Center" Margin="190,209" VerticalAlignment="Center" Width="190" Height="34" MouseLeftButtonDown="LabLb_MouseLeftButtonDown" x:Name="LabLb" FontSize="19"/>
+        <Label HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Content="Лабараторная" HorizontalAlignment="Center" Margin="193,209,187,209" VerticalAlignment="Center" Width="190" Height="34" MouseLeftButtonDown="LabLb_MouseLeftButtonDown" x:Name="LabLb" FontSize="19"/>
+        <Image Margin="10,0,260,352" Source="PhysicLabs.png" Stretch="Fill"/>
     </Grid>
 </Window>
