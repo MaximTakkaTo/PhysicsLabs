@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyTitle("PhysicsLabs")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("MaximAstashkin")]
 [assembly: AssemblyProduct("PhysicsLabs")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]

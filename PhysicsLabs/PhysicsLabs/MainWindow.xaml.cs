@@ -51,7 +51,7 @@ namespace PhysicsLabs
 
         private void LabLb_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (LabCb.SelectedItem == null)
+            if (LabCb.SelectedItem == null && GradeCb.SelectedItem != null)
             {
                 LabLb.Visibility = Visibility.Collapsed;
                 LabCb.IsDropDownOpen = true;
@@ -78,8 +78,13 @@ namespace PhysicsLabs
         private void GradeCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             LabCb.Items.Clear();
-            if (GradeCb.SelectedItem == GradeCb.Items[1])
+            if (GradeCb.SelectedItem != null)
             {
+                LabCb.IsEnabled = true;
+                LabLb.IsEnabled = true;
+            }
+            if (GradeCb.SelectedItem == GradeCb.Items[1])
+            { 
                 LabCb.Items.Add("Изучение движения тел по окружности под действием силы упругости и тяжести.");
                 LabCb.Items.Add("Экспериментальное изучение закона сохранения механической энергии.");
                 LabCb.Items.Add("Опытная проверка закона Гей-Люссака.");
@@ -88,16 +93,14 @@ namespace PhysicsLabs
             }
         }
 
-        private void LabCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (LabCb.SelectedItem == LabCb.Items[0])
             {
-                MessageBox.Show("Переходим");
                 TenOne tenOne = new TenOne();
                 this.Close();
                 tenOne.Show();
             }
-                
         }
     }
 }
