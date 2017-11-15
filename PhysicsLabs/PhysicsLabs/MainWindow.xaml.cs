@@ -102,6 +102,12 @@ namespace PhysicsLabs
                 this.Close();
                 tenOne.Show();
             }
+            if(LabCb.SelectedItem == LabCb.Items[1])
+            {
+                tenTwo tenTwo = new tenTwo();
+                this.Close();
+                tenTwo.Show();
+            }
         }
 
         private void LabCb_SelectionChanged(object sender, SelectionChangedEventArgs e)

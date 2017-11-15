@@ -1,0 +1,23 @@
+﻿<Window x:Class="PhysicsLabs.Labs.tenTwo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhysicsLabs.Labs"
+        mc:Ignorable="d"
+         Title="Экспериментальное изучение закона сохранения механической энергии" Height="435.096" Width="662.017" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="20,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name = "force1Tb" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="20,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name = "lenTb" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="20,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name = "dlenTb" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="20,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name = "forceyTb" FontSize="16"/>
+        
+        <Label Content="Вес шарика - F1, Н:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,30,0,0" x:Name="force1Lb" FontSize="16"/>
+        <Label Content="Длина нити - L, СМ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,86,0,0" x:Name="lenLb" FontSize="16"/>
+        <Label Content="Макс. удлинение - ΔL, СМ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,140,0,0" Width="273" x:Name="dlenLb" FontSize="16"/>
+        <Label Content="Сила упругости - Fy, Н" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,194,0,0" Width="173" x:Name="forceyLb" FontSize="16"/>
+
+        <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="20,0,0,126" VerticalAlignment="Bottom" Width="75" Height="23" x:Name="caclBtn" Click="caclBtn_Click"/>
+
+    </Grid>
+</Window>
