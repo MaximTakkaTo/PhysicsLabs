@@ -6,9 +6,9 @@
         xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
         xmlns:local="clr-namespace:PhysicsLabs.Labs"
         mc:Ignorable="d"
-        Title="Изучение движения тел по окружности под действием силы упругости и тяжести" Height="435.096" Width="775.017" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Изучение движения тел по окружности под действием силы упругости и тяжести" Height="435.096" Width="662.017" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
-        <Button Content="Справка&#xD;&#xA;" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,16,10" Width="75" Height="23" x:Name="referenceBtn" Click="referenceBtn_Click"/>
+        <Button Content="Справка&#xD;&#xA;" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" Width="75" Height="23" x:Name="referenceBtn" Click="referenceBtn_Click"/>
 
         <TextBox HorizontalAlignment="Left" Height="23" Margin="20,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name = "radTb" FontSize="16"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="20,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name = "obTb" FontSize="16"/>
@@ -24,10 +24,15 @@
         <Label Content="Масса - m , ГР" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,248,0,0" Width="120" x:Name="weightLb" FontSize="16"/>
         <Label Content="Сила - F1, Н" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,298,0,0" Width="120" x:Name="forceLb" FontSize="16"/>
 
-        <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="38,0,0,12" VerticalAlignment="Bottom" Width="75" Height="23" x:Name="caclBtn" Click="caclBtn_Click"/>
-        <StackPanel HorizontalAlignment="Left" Height="187" Margin="253,58,0,0" VerticalAlignment="Top" Width="395">
+        <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="20,0,0,12" VerticalAlignment="Bottom" Width="75" Height="23" x:Name="caclBtn" Click="caclBtn_Click"/>
+        <StackPanel HorizontalAlignment="Left" Height="221" Margin="253,38,0,0" VerticalAlignment="Top" Width="395">
             <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="54"/>
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula2" Height="53"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula2" Height="54"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula3" Height="54"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula4" Height="54"/>
         </StackPanel>
+        <Button Content="Изменить данные" HorizontalAlignment="Left" Margin="138,0,0,12" VerticalAlignment="Bottom" Width="107" Height="23" x:Name="chngBtn" Click="chngBtn_Click"/>
+        <Button Content="Вернуться к выбору лаб." HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,123,10" Width="141" Height="23" x:Name="backBtn" Click="backBtn_Click"/>
+        <TextBlock HorizontalAlignment="Right" Margin="0,0,10,54" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="93" Width="393" x:Name="concTbl" Visibility="Visible" FontSize="14"/>
     </Grid>
 </Window>

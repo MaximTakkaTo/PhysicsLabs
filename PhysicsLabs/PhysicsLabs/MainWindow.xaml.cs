@@ -91,6 +91,7 @@ namespace PhysicsLabs
                 LabCb.Items.Add("Изучение законов последовательного и параллельного соединений проводников.");
                 LabCb.Items.Add("Измерение ЭДС и внутреннего сопротивления источника тока.");
             }
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -101,6 +102,14 @@ namespace PhysicsLabs
                 this.Close();
                 tenOne.Show();
             }
+        }
+
+        private void LabCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (LabCb.SelectedItem != null)
+                Btn.IsEnabled = true;
+            else
+                Btn.IsEnabled = false;
         }
     }
 }
