@@ -17,12 +17,12 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="20,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="weightTb" FontSize="16"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="20,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="forceTb" FontSize="16"/>
 
-        <Label Content="Радиус - r, СМ :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,30,0,0" x:Name="radLb" FontSize="16" />
-        <Label Content="Количество оборотов - N" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,86,0,0" x:Name="obLb" FontSize="16"/>
-        <Label Content="Время - t, С" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,140,0,0" Width="120" x:Name="timeLb" FontSize="16"/>
-        <Label Content="Высота - h, СМ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,194,0,0" Width="120" x:Name="heightLb" FontSize="16"/>
-        <Label Content="Масса - m , ГР" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,248,0,0" Width="120" x:Name="weightLb" FontSize="16"/>
-        <Label Content="Сила - F1, Н" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,301,0,0" Width="120" x:Name="forceLb" FontSize="16"/>
+        <Label Content="Радиус - r, СМ :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,30,0,0" x:Name="radLb" FontSize="16" ToolTip="Радиус - r"/>
+        <Label Content="Количество оборотов - N" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,86,0,0" x:Name="obLb" FontSize="16" ToolTip="Количество оборотов -  N"/>
+        <Label Content="Время - t, С" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,140,0,0" Width="120" x:Name="timeLb" FontSize="16" ToolTip="Время - t"/>
+        <Label Content="Высота - h, СМ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,194,0,0" Width="120" x:Name="heightLb" FontSize="16" ToolTip="Высота - h"/>
+        <Label Content="Масса - m , ГР" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,248,0,0" Width="120" x:Name="weightLb" FontSize="16" ToolTip="Масса - m"/>
+        <Label Content="Сила - F1, Н" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,301,0,0" Width="120" x:Name="forceLb" FontSize="16" ToolTip="Сила - F1"/>
         
         <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="20,0,0,12" VerticalAlignment="Bottom" Width="75" Height="23" x:Name="caclBtn" Click="caclBtn_Click"/>
         <Button Content="Изменить данные" HorizontalAlignment="Left" Margin="138,0,0,12" VerticalAlignment="Bottom" Width="107" Height="23" x:Name="chngBtn" Click="chngBtn_Click"/>
