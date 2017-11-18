@@ -24,58 +24,11 @@ namespace PhysicsLabs.Labs
         public TenOne()
         {
             InitializeComponent();
+            string[] cont = { "Радиус - r, СМ :","Количество оборотов - N :", "Время - t, С :", "Высота - h, СМ :", "Масса - m, ГР :" , "Сила - F1, Н :" };
+            string[] hint = { "Радиус - r", "Количество оборотов - N", "Время - t", "Высота - h", "Масса - m", "Сила - F1" };
+            Calculator.initComponents(tb, lb, cont, hint, g);
 
-            int l = 30;
 
-            int t = 58;
-
-            for (int i = 0; i < lb.Length; i++)
-            {
-                lb[i] = new Label();
-                lb[i].HorizontalAlignment = HorizontalAlignment.Left;
-                lb[i].VerticalAlignment = VerticalAlignment.Top;
-                lb[i].Width = 207;
-                lb[i].FontSize = 16;
-                g.Children.Add(lb[i]);
-            }
-
-            for (int i = 0; i < tb.Length; i++)
-            {
-                tb[i].Margin = new Thickness(20, t, 0, 0);
-                t += 54;
-            }
-
-            lb[0].Content = "Радиус - r, СМ :";
-            lb[1].Content = "Количество оборотов - N :";
-            lb[2].Content = "Время - t, С :";
-            lb[3].Content = "Высота - h, СМ :";
-            lb[4].Content = "Масса - m, ГР :";
-            lb[5].Content = "Сила - F1, Н :";
-
-            lb[0].ToolTip = "Радиус - r";
-            lb[1].ToolTip = "Количество оборотов - N";
-            lb[2].ToolTip = "Время - t";
-            lb[3].ToolTip = "Высота - h";
-            lb[4].ToolTip = "Масса - m";
-            lb[5].ToolTip = "Сила - F1";
-
-            for (int i = 0; i < tb.Length; i++)
-            {
-                tb[i] = new TextBox();
-                tb[i].HorizontalAlignment = HorizontalAlignment.Left;
-                tb[i].VerticalAlignment = VerticalAlignment.Top;
-                tb[i].Height = 23;
-                tb[i].Width = 120;
-                tb[i].FontSize = 16;
-                tb[i].TextWrapping = TextWrapping.Wrap;
-                g.Children.Add(tb[i]);
-            }
-
-            for (int i = 0; i < tb.Length; i++)
-            {
-                lb[i].Margin = new Thickness(15, l, 0, 0);
-                l += 54;
-            }
 
             reference();
         }
