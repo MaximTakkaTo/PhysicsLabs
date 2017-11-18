@@ -51,7 +51,7 @@ namespace PhysicsLabs.Labs
             string eror;
             int er = 0;
             TextBox[] tb ={radTb,obTb,timeTb,heightTb,weightTb,forceTb };
-            Label[] lb = { radLb, obLb, timeLb, heightLb, weightLb, forceLb }; ;
+            Label[] lb = { radLb, obLb, timeLb, heightLb, weightLb, forceLb }; 
             double[] data = new double[6];
 
             Calculator.inputData(tb, lb, data, out eror, out er);
