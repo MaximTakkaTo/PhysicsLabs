@@ -40,7 +40,6 @@ namespace PhysicsLabs
                     eror += lb[i].ToolTip;
                     er++;
                 }
-                Console.WriteLine(data[i]);
             }
         }
     }
