@@ -17,10 +17,66 @@ using WpfMath;
 namespace PhysicsLabs.Labs
 {
     public partial class TenOne : Window
-    { 
+    {
+        TextBox[] tb = new TextBox[6];
+        Label[] lb = new Label[6];
+
         public TenOne()
         {
             InitializeComponent();
+
+            int l = 30;
+
+            int t = 58;
+
+            for (int i = 0; i < lb.Length; i++)
+            {
+                lb[i] = new Label();
+                lb[i].HorizontalAlignment = HorizontalAlignment.Left;
+                lb[i].VerticalAlignment = VerticalAlignment.Top;
+                lb[i].Width = 207;
+                lb[i].FontSize = 16;
+                g.Children.Add(lb[i]);
+            }
+
+            for (int i = 0; i < tb.Length; i++)
+            {
+                tb[i].Margin = new Thickness(20, t, 0, 0);
+                t += 54;
+            }
+
+            lb[0].Content = "Радиус - r, СМ :";
+            lb[1].Content = "Количество оборотов - N :";
+            lb[2].Content = "Время - t, С :";
+            lb[3].Content = "Высота - h, СМ :";
+            lb[4].Content = "Масса - m, ГР :";
+            lb[5].Content = "Сила - F1, Н :";
+
+            lb[0].ToolTip = "Радиус - r";
+            lb[1].ToolTip = "Количество оборотов - N";
+            lb[2].ToolTip = "Время - t";
+            lb[3].ToolTip = "Высота - h";
+            lb[4].ToolTip = "Масса - m";
+            lb[5].ToolTip = "Сила - F1";
+
+            for (int i = 0; i < tb.Length; i++)
+            {
+                tb[i] = new TextBox();
+                tb[i].HorizontalAlignment = HorizontalAlignment.Left;
+                tb[i].VerticalAlignment = VerticalAlignment.Top;
+                tb[i].Height = 23;
+                tb[i].Width = 120;
+                tb[i].FontSize = 16;
+                tb[i].TextWrapping = TextWrapping.Wrap;
+                g.Children.Add(tb[i]);
+            }
+
+            for (int i = 0; i < tb.Length; i++)
+            {
+                lb[i].Margin = new Thickness(15, l, 0, 0);
+                l += 54;
+            }
+
             reference();
         }
 
@@ -47,27 +103,26 @@ namespace PhysicsLabs.Labs
         private void caclBtn_Click(object sender, RoutedEventArgs e)
         {
             double a1, a2, a3, T;
-
-            string eror;
             int er = 0;
-            TextBox[] tb ={radTb,obTb,timeTb,heightTb,weightTb,forceTb };
-            Label[] lb = { radLb, obLb, timeLb, heightLb, weightLb, forceLb }; 
+            string eror;
+            string cT,cA1,cA2,cA3,conc;
+
             double[] data = new double[6];
 
             Calculator.inputData(tb, lb, data, out eror, out er);
             if (er == 0)
             {
+                offComponents();
                 Calculator.calcTenOne(data, out T, out a1, out a2, out a3);
-                output(data, T, a1, a2, a3);
+                Calculator.tenOneOutput(data, T, a1, a2, a3,out cT,out cA1,out cA2,out cA3,out conc);
+                formula1.Formula = cT;
+                formula2.Formula = cA1;
+                formula3.Formula = cA2;
+                formula4.Formula = cA3;
+                concTbl.Text = conc;
             }
             else
-            {
-                
                 MessageBox.Show(eror);
-            }
-
-
-
         }
 
         private void chngBtn_Click(object sender, RoutedEventArgs e)
@@ -75,35 +130,12 @@ namespace PhysicsLabs.Labs
             onComponents();
         }
 
-        private void output(double[]data,double T, double a1, double a2, double a3)
-        {
-            offComponents();
-            string cT,cA1,cA2,cA3,conc ;
-            cT = "T = \\frac{t}{N}" + " = \\frac{" + data[2]+ "}" + "{" + data[1] + "} = " + T.ToString("0.###") + "C";
-            cA1 = "a_{1} = " + "\\frac{4\\pi^2R}{T^2} " + " = \\frac{4 \\pi^2 *" + (data[0] / 100).ToString("0.###") + "}{" + T.ToString("0.###") + "^{2}} = " + a1.ToString("0.###") + "\\frac{M}{C^2}";
-            cA2 = "a_{2} = " + " \\frac{gR}{h}" + " = \\frac{g * " + (data[0] / 100).ToString("0.###") + "}{" + (data[3]/ 100).ToString("0.###") + "} = " + a2.ToString("0.###") + "\\frac{M}{C^2}";
-            cA3 = "a_{3} = \\frac {F_{1}}{m}" + " = \\frac{" + data[5].ToString() + "}{" + (data[4] / 1000).ToString("0.###") + "} =" + a3.ToString("0.###") + "\\frac{M}{C^2}";
-
-            formula1.Formula = cT;
-            formula2.Formula = cA1;
-            formula3.Formula = cA2;
-            formula4.Formula = cA3;
-            if (a1.ToString()[0] == a2.ToString()[0] && a1.ToString()[0] == a3.ToString()[0])
-                conc = "Вывод : сравнивая полученные три значения модуля центростремительного ускорения : a1 = " + a1.ToString("0.###") + ";a2 = " + a2.ToString("0.###") + "; a3 = " + a3.ToString("0.###") + ", убеждаемся, что они примерно одинаковы.Это подтверждает правильность ваших измерений.";
-            else
-                conc = "Вывод : сравнивая полученные три значения модуля центростремительного ускорения : a1 = " + a1.ToString("0.###") + ";\na2 = " + a2.ToString("0.###") + "; a3 = " + a3.ToString("0.###") +", убеждаемся, что они неравны => проверьте точность и правильность своих измерений.Читайте справку по лабораторной.";
-            concTbl.Text = conc;
-        }
-
         private void offComponents()
         {
+            for (int i = 0;i < tb.Length;i++)
+                tb[i].IsEnabled = false;
+
             caclBtn.IsEnabled = false;
-            radTb.IsEnabled = false;
-            obTb.IsEnabled = false;
-            timeTb.IsEnabled = false;
-            heightTb.IsEnabled = false;
-            weightTb.IsEnabled = false;
-            forceTb.IsEnabled = false;
             chngBtn.IsEnabled = true;
             backBtn.IsEnabled = false;
             concTbl.Visibility = Visibility.Visible;
@@ -111,17 +143,14 @@ namespace PhysicsLabs.Labs
 
         private void onComponents()
         {
+            for (int i = 0; i < tb.Length; i++)
+                tb[i].IsEnabled = true;
+
             formula1.Formula = "";
             formula2.Formula = "";
             formula3.Formula = "";
             formula4.Formula = "";
             caclBtn.IsEnabled = true;
-            radTb.IsEnabled = true;
-            obTb.IsEnabled = true;
-            timeTb.IsEnabled = true;
-            heightTb.IsEnabled = true;
-            weightTb.IsEnabled = true;
-            forceTb.IsEnabled = true;
             chngBtn.IsEnabled = false;
             backBtn.IsEnabled = true;
             concTbl.Visibility = Visibility.Collapsed;

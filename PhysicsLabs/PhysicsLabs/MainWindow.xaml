@@ -18,7 +18,7 @@
         </ComboBox>
         <Button x:Name="Btn" IsEnabled="False" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Width="114" Margin="0,125,0,0" Height="30" Click="Button_Click"/>
         <Label HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Content="Класс" HorizontalAlignment="Center" Margin="193,149,193,269" VerticalAlignment="Center" Width="184" Height="34" MouseLeftButtonDown="GradeLb_MouseLeftButtonDown" x:Name="GradeLb" FontSize="19"/>
-        <Label HorizontalContentAlignment="Left" IsEnabled=" False" VerticalContentAlignment="Center" Content="Лабараторная" HorizontalAlignment="Center" Margin="193,209,187,209" VerticalAlignment="Center" Width="190" Height="34" MouseLeftButtonDown="LabLb_MouseLeftButtonDown" x:Name="LabLb" FontSize="19"/>
+        <Label HorizontalContentAlignment="Left" IsEnabled=" False" VerticalContentAlignment="Center" Content="Лабораторная" HorizontalAlignment="Center" Margin="193,209,187,209" VerticalAlignment="Center" Width="190" Height="34" MouseLeftButtonDown="LabLb_MouseLeftButtonDown" x:Name="LabLb" FontSize="19"/>
         <Image Margin="135,0,135,352" Source="Pictures/PhysicLabs.png" Stretch="Fill"/>
     </Grid>
 </Window>
