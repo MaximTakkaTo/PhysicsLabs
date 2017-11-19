@@ -34,7 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Stylised_Lithium_Atom.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -60,11 +61,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Labs\tenOne.xaml">
+    <Page Include="Labs\ten\tenOne\tenOne.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Labs\tenTwo.xaml">
+    <Page Include="Labs\ten\tenTwo\tenTwo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -76,11 +77,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Calculator.cs" />
-    <Compile Include="Labs\tenOne.xaml.cs">
+    <Compile Include="Form.cs" />
+    <Compile Include="Labs\ten\tenOne\Calc.cs" />
+    <Compile Include="Labs\ten\tenOne\tenOne.xaml.cs">
       <DependentUpon>tenOne.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Labs\tenTwo.xaml.cs">
+    <Compile Include="Labs\ten\tenTwo\Calc.cs" />
+    <Compile Include="Labs\ten\tenTwo\tenTwo.xaml.cs">
       <DependentUpon>tenTwo.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
@@ -124,8 +127,6 @@
   <ItemGroup>
     <Resource Include="Pictures\Physic.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Stylised_Lithium_Atom.ico" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

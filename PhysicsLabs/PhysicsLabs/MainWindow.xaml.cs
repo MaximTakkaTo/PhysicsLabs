@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using PhysicsLabs.Labs;
+using Ph = PhysicsLabs.Labs.ten;
 
 namespace PhysicsLabs
 {
@@ -78,6 +68,7 @@ namespace PhysicsLabs
         private void GradeCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             LabCb.Items.Clear();
+
             if (GradeCb.SelectedItem != null)
             {
                 LabCb.IsEnabled = true;
@@ -90,21 +81,20 @@ namespace PhysicsLabs
                 LabCb.Items.Add("Опытная проверка закона Гей-Люссака.");
                 LabCb.Items.Add("Изучение законов последовательного и параллельного соединений проводников.");
                 LabCb.Items.Add("Измерение ЭДС и внутреннего сопротивления источника тока.");
-            }
-            
+            }   
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (LabCb.SelectedItem == LabCb.Items[0])
             {
-                TenOne tenOne = new TenOne();
+                Ph.tenOne.tenOne tenOne = new Ph.tenOne.tenOne();
                 this.Close();
                 tenOne.Show();
             }
             if(LabCb.SelectedItem == LabCb.Items[1])
             {
-                tenTwo tenTwo = new tenTwo();
+                Ph.tenTwo.tenTwo tenTwo = new Ph.tenTwo.tenTwo();
                 this.Close();
                 tenTwo.Show();
             }

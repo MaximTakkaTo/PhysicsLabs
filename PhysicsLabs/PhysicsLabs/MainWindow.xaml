@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhysicsLabs"
         mc:Ignorable="d"
-        
         Title="PhysicsLab" Height="480.906" Width="576.304" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="Pictures/Physic.png">
     <Grid>
         <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="184" Height="34" Margin="0,0,0,120" x:Name="GradeCb" DropDownClosed="GradeCb_DropDownClosed" DropDownOpened="GradeCb_DropDownOpened" FontSize="22" SelectionChanged="GradeCb_SelectionChanged">
