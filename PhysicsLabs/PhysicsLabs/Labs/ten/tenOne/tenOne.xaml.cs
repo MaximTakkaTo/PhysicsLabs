@@ -73,7 +73,7 @@ namespace PhysicsLabs.Labs.ten.tenOne
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mW = new MainWindow();
+            MainWindow mW = new MainWindow(true);
             Form.Menu(mW, this);
         }
 

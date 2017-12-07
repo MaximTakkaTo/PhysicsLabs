@@ -3,23 +3,40 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Ph = PhysicsLabs.Labs.ten;
+using System.Windows.Threading;
+using System.Threading;
 
 namespace PhysicsLabs
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
+        public MainWindow(bool f)
+        { 
             InitializeComponent();
         }
 
+        public MainWindow()
+        {
+            Splash();
+            InitializeComponent();
+        }
+
+        private bool Splash()
+        {
+            var time = new TimeSpan(0, 0, 3);
+            SplashScreen splashScreen = new SplashScreen("Pictures/Splash.png");
+            splashScreen.Show(false);
+            splashScreen.Close(time);
+            Thread.Sleep(4000);
+            return true;
+        }
+       
         private void GradeLb_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (GradeCb.SelectedItem == null)
             {
                 GradeLb.Visibility = Visibility.Collapsed;
                 GradeCb.IsDropDownOpen = true;
-
             }
         }
 
@@ -29,7 +46,6 @@ namespace PhysicsLabs
             {
                 GradeLb.Visibility = Visibility.Collapsed;
                 GradeCb.IsDropDownOpen = true;
-
             }
         }
 
@@ -45,7 +61,6 @@ namespace PhysicsLabs
             {
                 LabLb.Visibility = Visibility.Collapsed;
                 LabCb.IsDropDownOpen = true;
-
             }
         }
 
@@ -55,7 +70,6 @@ namespace PhysicsLabs
             {
                 LabLb.Visibility = Visibility.Collapsed;
                 LabCb.IsDropDownOpen = true;
-
             }
         }
 

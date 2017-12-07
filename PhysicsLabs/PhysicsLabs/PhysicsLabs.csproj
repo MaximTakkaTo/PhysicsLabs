@@ -37,6 +37,9 @@
     <ApplicationIcon>
     </ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -136,19 +139,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictures\Stylised_Lithium_Atom.ico" />
+    <Resource Include="Pictures\ICO.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictures\PhysicLabs.png" />
+    <Resource Include="Pictures\Splash.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictures\Physic.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Pictures\LOGOOO.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="LG.png" />
+    <Resource Include="Pictures\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

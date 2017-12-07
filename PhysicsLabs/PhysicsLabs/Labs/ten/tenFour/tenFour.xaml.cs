@@ -89,7 +89,7 @@ namespace PhysicsLabs.Labs.ten.tenFour
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mW = new MainWindow();
+            MainWindow mW = new MainWindow(true);
             Form.Menu(mW, this);
         }
     }
