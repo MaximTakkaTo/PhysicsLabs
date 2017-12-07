@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace PhysicsLabs.Labs.ten.tenThree
 {
-    /// <summary>
-    /// Логика взаимодействия для tenThree.xaml
-    /// </summary>
     public partial class tenThree : Window
     {
         Button[] btn = new Button[4];

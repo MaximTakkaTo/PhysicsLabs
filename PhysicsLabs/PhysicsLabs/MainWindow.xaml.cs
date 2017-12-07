@@ -106,6 +106,7 @@ namespace PhysicsLabs
                 this.Close();
                 tenOne.Show();
             }
+            
             if(LabCb.SelectedItem == LabCb.Items[1])
             {
                 Ph.tenTwo.tenTwo tenTwo = new Ph.tenTwo.tenTwo();
@@ -124,6 +125,7 @@ namespace PhysicsLabs
                 this.Close();
                 tenFour.Show();
             }
+            
         }
 
         private void LabCb_SelectionChanged(object sender, SelectionChangedEventArgs e)

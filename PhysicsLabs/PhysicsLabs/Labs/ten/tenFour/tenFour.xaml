@@ -6,7 +6,7 @@
         xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
         xmlns:local="clr-namespace:PhysicsLabs.Labs"
         mc:Ignorable="d"
-        Title="Изучение законов последовательного и параллельного соединений проводников" Height="429.096" Width="662.017" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Изучение законов последовательного и параллельного соединений проводников" Height="480" Width="662.017" WindowStartupLocation="CenterScreen" >
     <Grid x:Name="Grid">
         <StackPanel HorizontalAlignment="Left" Height="221" Margin="240,20,0,0" VerticalAlignment="Top" Width="395">
             <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="54"/>
@@ -15,5 +15,7 @@
             <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula4" Height="54"/>
         </StackPanel>
         <TextBlock HorizontalAlignment="Left" Margin="240,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="107" Width="393" x:Name="concTbl" Visibility="Visible" FontSize="14"/>
+        <Label FontSize="16" FontWeight="Bold" Content="Для последовательного соединения :" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top"/>
+        <Label FontSize="16" FontWeight="Bold" Content="Для параллельного соединения :" HorizontalAlignment="Left" Margin="5,196,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
