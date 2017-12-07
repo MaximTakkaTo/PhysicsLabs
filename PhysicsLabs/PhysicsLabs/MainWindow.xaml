@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhysicsLabs"
         mc:Ignorable="d"
-        Title="PhysicsLab" Height="480.906" Width="576.304" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="Pictures/Physic.png">
+        Title="PhysicsLabs" Height="384.906" Width="385.304" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="Pictures/Physic.png">
     <Grid>
-        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="184" Height="34" Margin="0,0,0,120" x:Name="GradeCb" DropDownClosed="GradeCb_DropDownClosed" DropDownOpened="GradeCb_DropDownOpened" FontSize="22" SelectionChanged="GradeCb_SelectionChanged">
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="184" Height="34" Margin="0,0,0,125" x:Name="GradeCb" DropDownClosed="GradeCb_DropDownClosed" DropDownOpened="GradeCb_DropDownOpened" FontSize="22" SelectionChanged="GradeCb_SelectionChanged">
             <ComboBoxItem Content="9 класс" HorizontalAlignment="Left" Width="182" IsEnabled="False" FontSize="19"/>
             <ComboBoxItem Content="10 класс" HorizontalAlignment="Left" Width="182" FontSize="19"/>
             <ComboBoxItem Content="11 класс" HorizontalAlignment="Left" Width="182" IsEnabled="False" FontSize="19"/>
@@ -16,8 +16,10 @@
             <ComboBoxItem Content="" HorizontalAlignment="Left" Width="182" IsEnabled="False" FontSize="19"/>
         </ComboBox>
         <Button x:Name="Btn" IsEnabled="False" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Width="114" Margin="0,125,0,0" Height="30" Click="Button_Click"/>
-        <Label HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Content="Класс" HorizontalAlignment="Center" Margin="193,149,193,269" VerticalAlignment="Center" Width="184" Height="34" MouseLeftButtonDown="GradeLb_MouseLeftButtonDown" x:Name="GradeLb" FontSize="19"/>
-        <Label HorizontalContentAlignment="Left" IsEnabled=" False" VerticalContentAlignment="Center" Content="Лабораторная" HorizontalAlignment="Center" Margin="193,209,187,209" VerticalAlignment="Center" Width="190" Height="34" MouseLeftButtonDown="LabLb_MouseLeftButtonDown" x:Name="LabLb" FontSize="19"/>
-        <Image Margin="135,0,135,352" Source="Pictures/PhysicLabs.png" Stretch="Fill"/>
+        <Label HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Content="Класс" HorizontalAlignment="Center" Margin="0,0,0,125" VerticalAlignment="Center" Width="184" Height="34" MouseLeftButtonDown="GradeLb_MouseLeftButtonDown" x:Name="GradeLb" FontSize="19"/>
+        <Label HorizontalContentAlignment="Left" IsEnabled=" False" VerticalContentAlignment="Center" Content="Лабораторная" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="190" Height="34" MouseLeftButtonDown="LabLb_MouseLeftButtonDown" x:Name="LabLb" FontSize="19"/>
+        <Label Content="v0.1.0.1" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
+        <Label Content="Astashkin2017©" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
+        <Image Margin="0,-6,-10,258" Source="Pictures/LOGOOO.png" Stretch="Fill"/>
     </Grid>
 </Window>

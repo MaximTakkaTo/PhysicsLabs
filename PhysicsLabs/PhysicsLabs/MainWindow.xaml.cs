@@ -98,6 +98,18 @@ namespace PhysicsLabs
                 this.Close();
                 tenTwo.Show();
             }
+            if(LabCb.SelectedItem == LabCb.Items[2])
+            {
+                Ph.tenThree.tenThree tenThree = new Ph.tenThree.tenThree();
+                this.Close();
+                tenThree.Show();
+            }
+            if(LabCb.SelectedItem == LabCb.Items[3])
+            {
+                Ph.tenFour.tenFour tenFour = new Ph.tenFour.tenFour();
+                this.Close();
+                tenFour.Show();
+            }
         }
 
         private void LabCb_SelectionChanged(object sender, SelectionChangedEventArgs e)

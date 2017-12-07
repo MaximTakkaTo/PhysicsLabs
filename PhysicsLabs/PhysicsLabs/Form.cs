@@ -86,6 +86,53 @@ namespace PhysicsLabs
                 lb[i].ToolTip = hint[i];
         }
 
+        public static void InComp(TextBox[] tb, Label[] lb, string[] cont, string[] hint, Grid g, int tbMargin, int lbMargin)
+        {
+            int l = 5;
+            int t = 33;
+            int b = 20;
+
+            for (int i = 0; i < lb.Length; i++)
+            {
+                lb[i] = new Label();
+                lb[i].HorizontalAlignment = HorizontalAlignment.Left;
+                lb[i].VerticalAlignment = VerticalAlignment.Top;
+                lb[i].Width = 280;
+                lb[i].FontSize = 16;
+                g.Children.Add(lb[i]);
+            }
+
+            for (int i = 0; i < tb.Length; i++)
+            {
+                tb[i] = new TextBox();
+                tb[i].HorizontalAlignment = HorizontalAlignment.Left;
+                tb[i].VerticalAlignment = VerticalAlignment.Top;
+                tb[i].Height = 23;
+                tb[i].Width = 120;
+                tb[i].FontSize = 16;
+                tb[i].TextWrapping = TextWrapping.Wrap;
+                g.Children.Add(tb[i]);
+            }
+
+            for (int i = 0; i < tb.Length; i++)
+            {
+                tb[i].Margin = new Thickness(tbMargin, t, 0, 0);
+                t += 54;
+            }
+
+            for (int i = 0; i < lb.Length; i++)
+            {
+                lb[i].Margin = new Thickness(lbMargin, l, 0, 0);
+                l += 54;
+            }
+
+            for (int i = 0; i < lb.Length; i++)
+                lb[i].Content = cont[i];
+
+            for (int i = 0; i < lb.Length; i++)
+                lb[i].ToolTip = hint[i];
+        }
+
         public static void InData(TextBox[] tb, Label[] lb, double[] data, out string eror, out int er)
         {
             er = 0;

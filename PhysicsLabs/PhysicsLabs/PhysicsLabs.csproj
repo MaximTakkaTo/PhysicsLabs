@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,7 +62,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Labs\ten\tenFour\tenFour.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Labs\ten\tenOne\tenOne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Labs\ten\tenThree\tenThree.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -78,9 +87,17 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Form.cs" />
+    <Compile Include="Labs\ten\tenFour\Calc.cs" />
+    <Compile Include="Labs\ten\tenFour\tenFour.xaml.cs">
+      <DependentUpon>tenFour.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Labs\ten\tenOne\Calc.cs" />
     <Compile Include="Labs\ten\tenOne\tenOne.xaml.cs">
       <DependentUpon>tenOne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Labs\ten\tenThree\Calc.cs" />
+    <Compile Include="Labs\ten\tenThree\tenThree.xaml.cs">
+      <DependentUpon>tenThree.xaml</DependentUpon>
     </Compile>
     <Compile Include="Labs\ten\tenTwo\Calc.cs" />
     <Compile Include="Labs\ten\tenTwo\tenTwo.xaml.cs">
@@ -127,6 +144,11 @@
   <ItemGroup>
     <Resource Include="Pictures\Physic.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Pictures\LOGOOO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LG.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

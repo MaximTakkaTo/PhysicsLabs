@@ -1,0 +1,19 @@
+﻿<Window x:Class="PhysicsLabs.Labs.ten.tenFour.tenFour"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+        xmlns:local="clr-namespace:PhysicsLabs.Labs"
+        mc:Ignorable="d"
+        Title="Изучение законов последовательного и параллельного соединений проводников" Height="429.096" Width="662.017" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid x:Name="Grid">
+        <StackPanel HorizontalAlignment="Left" Height="221" Margin="240,20,0,0" VerticalAlignment="Top" Width="395">
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="54"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula2" Height="54"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula3" Height="54"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula4" Height="54"/>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Margin="240,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="107" Width="393" x:Name="concTbl" Visibility="Visible" FontSize="14"/>
+    </Grid>
+</Window>
