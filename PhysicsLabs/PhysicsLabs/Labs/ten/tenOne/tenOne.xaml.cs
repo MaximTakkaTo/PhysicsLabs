@@ -13,11 +13,11 @@ namespace PhysicsLabs.Labs.ten.tenOne
         public tenOne()
         {
             InitializeComponent();
-            string[] bCont = { "Рассичтать", "Изменить данные", "Вернуться к выбору лаб.", "Справка" };
+            string[] bCont = { "Рассчитать", "Изменить данные", "Вернуться к выбору лаб.", "Справка" };
             string[] cont = { "Радиус - r, СМ :", "Количество оборотов - N :", "Время - t, С :", "Высота - h, СМ :", "Масса - m, ГР :", "Сила - F1, Н :" };
             string[] hint = { "Радиус - r", "Количество оборотов - N", "Время - t", "Высота - h", "Масса - m", "Сила - F1" };
             Form.InComp(tb, lb, cont, hint, mGrid,33,5);
-            Form.InBtn(btn, bCont, mGrid);
+            Form.InBtn(btn, bCont, mGrid,20);
 
             btn[0].Click += calcBtn_Click;
             btn[1].Click += chngBtn_Click;

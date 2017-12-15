@@ -13,12 +13,12 @@ namespace PhysicsLabs.Labs.ten.tenTwo
         public tenTwo()
         {
             InitializeComponent();
-            string[] bCont = { "Рассичтать", "Изменить данные", "Вернуться к выбору лаб.", "Справка" };
+            string[] bCont = { "Рассчитать", "Изменить данные", "Вернуться к выбору лаб.", "Справка" };
             string[] cont = { "Вес шарика - F1, Н :", "L - длина нити , СМ :", "Макс.удлинение - ΔL, СМ :", "Макс.сила упругости - Fy, Н :"};
             string[] hint = { "Вес шарика - F1", "L - длина нити", "Макс.удлинение - ΔL", "Макс.сила упругости - Fy", };
 
             Form.InComp(tb, lb, cont, hint, g,33,5);
-            Form.InBtn(btn, bCont, g);
+            Form.InBtn(btn, bCont, g,20);
 
             btn[0].Click += calcBtn_Click;
             btn[1].Click += chngBtn_Click;

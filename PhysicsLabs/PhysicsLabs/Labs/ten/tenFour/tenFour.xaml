@@ -6,16 +6,25 @@
         xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
         xmlns:local="clr-namespace:PhysicsLabs.Labs"
         mc:Ignorable="d"
-        Title="Изучение законов последовательного и параллельного соединений проводников" Height="480" Width="662.017" WindowStartupLocation="CenterScreen" >
+        Title="Изучение законов последовательного и параллельного соединений проводников" Height="734.5" Width="687.017" WindowStartupLocation="CenterScreen" >
     <Grid x:Name="Grid">
-        <StackPanel HorizontalAlignment="Left" Height="221" Margin="240,20,0,0" VerticalAlignment="Top" Width="395">
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="54"/>
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula2" Height="54"/>
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula3" Height="54"/>
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula4" Height="54"/>
+        <StackPanel HorizontalAlignment="Left" Height="268" Margin="259,37,0,0" VerticalAlignment="Top" Width="420">
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="43"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,5,0,0" x:Name="formula2" Height="43"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,2,0,0" x:Name="formula3" Height="40"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,-5,0,0" x:Name="formula4" Height="40"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,-10,0,0" x:Name="formula5" Height="44"/>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" Margin="240,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="107" Width="393" x:Name="concTbl" Visibility="Visible" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="240,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="107" Width="393" x:Name="concTbl" Visibility="Visible" FontSize="14"/>
         <Label FontSize="16" FontWeight="Bold" Content="Для последовательного соединения :" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top"/>
-        <Label FontSize="16" FontWeight="Bold" Content="Для параллельного соединения :" HorizontalAlignment="Left" Margin="5,196,0,0" VerticalAlignment="Top"/>
+        <Label FontSize="16" FontWeight="Bold" Content="Для параллельного соединения :" HorizontalAlignment="Left" Margin="5,305,0,0" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Left" Height="307" Margin="259,336,0,0" VerticalAlignment="Top" Width="420">
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula6" Height="45"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,5,0,0" x:Name="formula7" Height="45"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,5,0,0" x:Name="formula8" Height="45"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,20,0,0" x:Name="formula9" Height="40"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,5,0,0" x:Name="formula10" Height="45"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula11" Height="45"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -17,7 +17,7 @@ namespace PhysicsLabs
 
         public MainWindow()
         {
-            Splash();
+            //Splash();
             InitializeComponent();
         }
 
