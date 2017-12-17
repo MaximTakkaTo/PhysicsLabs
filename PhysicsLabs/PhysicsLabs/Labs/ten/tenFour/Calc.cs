@@ -40,14 +40,14 @@ namespace PhysicsLabs.Labs.ten.tenFour
             cU = "U = U_{1} + U_{2} = " + data[0].ToString("0.###") + " + " + data[1].ToString("0.###") + " = " + U.ToString("0.###") + "V";
             if (att1 == att2)
             {
-                cAtt = "\\frac{U_{1}}{U_{2}} = \\frac{R_{1}}{R_{2}} ; \\frac{" + data[0].ToString("0.###") + "}{" + data[1].ToString("0.###") + "} = \\frac{" + R1.ToString("0.###") + "}{" + R2.ToString("0.###") + "} = " + att1.ToString("0.###");
+                cAtt = "\\frac{U_{1}}{U_{2}} = \\frac{R_{1}}{R_{2}} ; \\frac{" + data[0].ToString("0.###") + "}{" + data[1].ToString("0.######") + "} = \\frac{" + R1.ToString("0.######") + "}{" + R2.ToString("0.######") + "} = " + att1.ToString("0.######");
                 f1 = true;
             }   
             else
-                cAtt = "\\frac{U_{1}}{U_{2}} = \\frac{R_{1}}{R_{2}} ; \\frac{" + data[0].ToString("0.###") + "}{" + data[1].ToString("0.###") + "} \\neq \\frac{" + R1.ToString("0.###") + "}{" + R2.ToString("0.###") + "}";
+                cAtt = "\\frac{U_{1}}{U_{2}} = \\frac{R_{1}}{R_{2}} ; \\frac{" + data[0].ToString("0.###") + "}{" + data[1].ToString("0.###") + "} \\neq \\frac{" + R1.ToString("0.###") + "}{" + R2.ToString("0.######") + "}";
         }
         
-        public static void OutParl(double[] data, double R1, double R2, double R, double I, double att1, double att2, out string cR1, out string cR2, out string cR3, out string cR4, out string cI, out string cAtt)
+        public static void OutParl(double[] data, double R1, double R2, double R, double I, double att1, double att2, out string cR1, out string cR2, out string cR3, out string cR4, out string cI, out string cAtt, out string conc)
         {
             cR1 = "R_{1} = \\frac{U}{I_{1}} = \\frac{" + data[2].ToString("0.###") + "}{" + data[0].ToString("0.###") + "} = " + R1.ToString("0.###") + "(OM)" ;
             cR2 = "R_{2} = \\frac{U}{I_{2}} = \\frac{" + data[2].ToString("0.###") + "}{" + data[1].ToString("0.###") + "} = " + R2.ToString("0.###") + "(OM)";
@@ -56,13 +56,20 @@ namespace PhysicsLabs.Labs.ten.tenFour
             cI = "I = I_{1} + I_{2} = " + data[0].ToString("0.###") + " + " + data[1].ToString("0.###") + " = " + I.ToString("0.###");
             if (att1 == att2)
             {
-                cAtt = "\\frac{I_{1}}{I_{2}} = \\frac{R_{1}}{R_{2}} ; \\frac{" + data[0].ToString("0.###") + "}{" + data[1].ToString("0.###") + "} = \\frac{" + R1.ToString("0.###") + "}{" + R2.ToString("0.###") + "} = " + att1.ToString("0.###");
+                cAtt = "\\frac{I_{1}}{I_{2}} = \\frac{R_{1}}{R_{2}} ; \\frac{" + data[0].ToString("0.###") + "}{" + data[1].ToString("0.###") + "} = \\frac{" + R1.ToString("0.########") + "}{" + R2.ToString("0.###") + "} = " + att1.ToString("0.######");
                 f2 = true;
             }
             else
-                cAtt = "\\frac{I_{1}}{U_{2}} = \\frac{I_{1}}{R_{2}} ; \\frac{" + data[0].ToString("0.###") + "}{" + data[1].ToString("0.###") + "} \\neq \\frac{" + R1.ToString("0.###") + "}{" + R2.ToString("0.###") + "}";
+                cAtt = "\\frac{I_{1}}{U_{2}} = \\frac{I_{1}}{R_{2}} ; \\frac{" + data[0].ToString("0.###") + "}{" + data[1].ToString("0.###") + "} \\neq \\frac{" + R1.ToString("0.#######") + "}{" + R2.ToString("0.###") + "}";
+            if (f1 && f2 && att1 != 0 || att2 != 0)
+            {
+                conc = "Сравнивая полученные отношения , подтверждаем справедливость законов последовательного и параллельного соединения проводников.";
+            }
+            else
+            {
+                conc = "Сравнивая полученные отношения, убеждаемся, что они неравны. Проверьте точность и правильность своих измерений.Читайте справку по лабораторной.";
+            }
+
         }
-
-
     }
 }

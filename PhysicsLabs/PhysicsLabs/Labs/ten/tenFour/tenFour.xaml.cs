@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System;
-
+using System.Windows.Input;
 
 namespace PhysicsLabs.Labs.ten.tenFour
 {
@@ -23,7 +23,7 @@ namespace PhysicsLabs.Labs.ten.tenFour
             string[] hint2 = { "Напряжение - U", "Сила тока 1 - I1", "Сила тока 2 - I2" };
             Form.InBtn(btn, bCont, Grid, 20);
             Form.InComp(tb1, lb1, cont1, hint1, Grid, 63, 35);
-            Form.InComp(tb2, lb2, cont2, hint2, Grid, 358, 330);
+            Form.InComp(tb2, lb2, cont2, hint2, Grid, 308, 280);
             reference();
 
             btn[0].Click += calcBtn_Click;
@@ -55,7 +55,7 @@ namespace PhysicsLabs.Labs.ten.tenFour
             double pR1, pR2, pR, pU, pAtt1, pAtt2;
             double lR1, lR2, lR, lI, lAtt1, lAtt2;
             string pCR1, pCR2, pCR, pCU,pCAtt1;
-            string lCR1, lCR2, lCR3,lCR4, lCI, lCAtt1;
+            string lCR1, lCR2, lCR3,lCR4, lCI, lCAtt1,conc;
 
 
             Form.InData(tb1, lb1, data1, out eror1, out er1);
@@ -67,7 +67,9 @@ namespace PhysicsLabs.Labs.ten.tenFour
                 Calc.CalculPosl(data1, out pR1, out pR2, out pR,out pU,out pAtt1,out pAtt2);
                 Calc.CalculParl(data2, out lR1, out lR2, out lR, out lI, out lAtt1, out lAtt2);
                 Calc.OutPosl(data1, pR1, pR2, pR, pU, pAtt1, pAtt2, out pCR1, out pCR2, out pCR, out pCU, out pCAtt1);
-                Calc.OutParl(data2, lR1, lR2, lR, lI, lAtt1, lAtt2 ,out lCR1, out lCR2, out lCR3, out lCR4, out lCI, out lCAtt1);
+                Calc.OutParl(data2, lR1, lR2, lR, lI, lAtt1, lAtt2 ,out lCR1, out lCR2, out lCR3, out lCR4, out lCI, out lCAtt1,out conc);
+                Console.WriteLine(lAtt1);
+                Console.WriteLine(lAtt2);
                 formula1.Formula = pCR1;
                 formula2.Formula = pCR2;
                 formula3.Formula = pCR;
@@ -79,6 +81,7 @@ namespace PhysicsLabs.Labs.ten.tenFour
                 formula9.Formula = lCR4;
                 formula10.Formula = lCI;
                 formula11.Formula = lCAtt1;
+                concTbl.Text = conc;
             }
             if(er1 != 0 || er2 != 0)
             {
@@ -151,6 +154,12 @@ namespace PhysicsLabs.Labs.ten.tenFour
             btn[1].IsEnabled = false;
             btn[2].IsEnabled = true;
             concTbl.Visibility = Visibility.Collapsed;
+        }
+
+        private void EnterClick(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+                calcBtn_Click(new object(),new RoutedEventArgs());
         }
     }
 }
