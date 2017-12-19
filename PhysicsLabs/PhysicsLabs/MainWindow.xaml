@@ -21,7 +21,7 @@
         
         <Button x:Name="Btn" IsEnabled="False" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Width="114" Margin="132,252,133,74" Height="30" Click="Button_Click"/>
 
-        <Label Content="v0.1.1.0" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
+        <Label Content="v0.7.1.0" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
         <Label Content="Astashkin2017©" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
 
         <Image Margin="9,10,10,266" Source="Pictures/Logo.png" Stretch="Fill"/>

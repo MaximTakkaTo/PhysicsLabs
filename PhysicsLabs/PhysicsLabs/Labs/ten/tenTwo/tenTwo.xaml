@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PhysicsLabs.Labs"
         xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
         mc:Ignorable="d"
-         Title="Экспериментальное изучение закона сохранения механической энергии" Height="330" Width="669.017" x:Name="Window" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+         Title="Экспериментальное изучение закона сохранения механической энергии" Height="330" Width="669" x:Name="Window" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid x:Name="g">
         <StackPanel HorizontalAlignment="Left" Height="200" Margin="248,30,0,0" VerticalAlignment="Top" Width="395">
             <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="66"/>

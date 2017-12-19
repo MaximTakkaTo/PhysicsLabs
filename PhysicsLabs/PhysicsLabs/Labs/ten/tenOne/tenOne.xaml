@@ -6,7 +6,7 @@
         xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
         xmlns:local="clr-namespace:PhysicsLabs.Labs"
         mc:Ignorable="d"
-        Title="Изучение движения тел по окружности под действием силы упругости и тяжести" Height="429.096" Width="662.017" WindowStartupLocation="CenterScreen" x:Name="Window" ResizeMode="CanMinimize">
+        Title="Изучение движения тел по окружности под действием силы упругости и тяжести" Height="429" Width="662" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid x:Name="mGrid">
         <StackPanel HorizontalAlignment="Left" Height="305" Margin="240,20,0,0" VerticalAlignment="Top" Width="395">
             <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="76"/>
