@@ -59,6 +59,7 @@ namespace PhysicsLabs.Labs.ten.tenTwo
 
                 Calc.Calcul(data, out h, out Ep1, out Ep2);
                 Calc.Out(data, h, Ep1, Ep2, out cH, out cEp1, out cEp2, out cTbl);
+                Window.Height += 70;
 
                 formula1.Formula = cH;
                 formula2.Formula = cEp1;
@@ -100,6 +101,7 @@ namespace PhysicsLabs.Labs.ten.tenTwo
             formula1.Formula = "";
             formula2.Formula = "";
             formula3.Formula = "";
+            Window.Height -= 70;
             btn[0].IsEnabled = true;
             btn[1].IsEnabled = false;
             btn[2].IsEnabled = true;

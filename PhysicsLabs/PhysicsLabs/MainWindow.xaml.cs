@@ -92,7 +92,6 @@ namespace PhysicsLabs
             { 
                 LabCb.Items.Add("Изучение движения тел по окружности под действием силы упругости и тяжести.");
                 LabCb.Items.Add("Экспериментальное изучение закона сохранения механической энергии.");
-                LabCb.Items.Add("Опытная проверка закона Гей-Люссака.");
                 LabCb.Items.Add("Изучение законов последовательного и параллельного соединений проводников.");
                 LabCb.Items.Add("Измерение ЭДС и внутреннего сопротивления источника тока.");
             }   
@@ -118,12 +117,6 @@ namespace PhysicsLabs
                 Ph.tenThree.tenThree tenThree = new Ph.tenThree.tenThree();
                 this.Close();
                 tenThree.Show();
-            }
-            if(LabCb.SelectedItem == LabCb.Items[3])
-            {
-                Ph.tenFour.tenFour tenFour = new Ph.tenFour.tenFour();
-                this.Close();
-                tenFour.Show();
             }
             
         }

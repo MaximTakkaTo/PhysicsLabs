@@ -79,15 +79,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Labs\ten\tenFour\tenFour.xaml">
+    <Page Include="Labs\ten\tenThree\tenThree.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Labs\ten\tenOne\tenOne.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Labs\ten\tenThree\tenThree.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,17 +100,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Form.cs" />
-    <Compile Include="Labs\ten\tenFour\Calc.cs" />
-    <Compile Include="Labs\ten\tenFour\tenFour.xaml.cs">
-      <DependentUpon>tenFour.xaml</DependentUpon>
+    <Compile Include="Labs\ten\tenThree\Calc.cs" />
+    <Compile Include="Labs\ten\tenThree\tenThree.xaml.cs">
+      <DependentUpon>tenThree.xaml</DependentUpon>
     </Compile>
     <Compile Include="Labs\ten\tenOne\Calc.cs" />
     <Compile Include="Labs\ten\tenOne\tenOne.xaml.cs">
       <DependentUpon>tenOne.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Labs\ten\tenThree\Calc.cs" />
-    <Compile Include="Labs\ten\tenThree\tenThree.xaml.cs">
-      <DependentUpon>tenThree.xaml</DependentUpon>
     </Compile>
     <Compile Include="Labs\ten\tenTwo\Calc.cs" />
     <Compile Include="Labs\ten\tenTwo\tenTwo.xaml.cs">

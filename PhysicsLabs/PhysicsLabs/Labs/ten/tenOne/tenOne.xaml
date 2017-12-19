@@ -6,14 +6,14 @@
         xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
         xmlns:local="clr-namespace:PhysicsLabs.Labs"
         mc:Ignorable="d"
-        Title="Изучение движения тел по окружности под действием силы упругости и тяжести" Height="429.096" Width="662.017" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Изучение движения тел по окружности под действием силы упругости и тяжести" Height="429.096" Width="662.017" WindowStartupLocation="CenterScreen" x:Name="Window" ResizeMode="CanMinimize">
     <Grid x:Name="mGrid">
-        <StackPanel HorizontalAlignment="Left" Height="221" Margin="240,20,0,0" VerticalAlignment="Top" Width="395">
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="54"/>
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula2" Height="54"/>
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula3" Height="54"/>
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula4" Height="54"/>
+        <StackPanel HorizontalAlignment="Left" Height="305" Margin="240,20,0,0" VerticalAlignment="Top" Width="395">
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="76"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula2" Height="76"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula3" Height="76"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula4" Height="76"/>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" Margin="240,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="107" Width="393" x:Name="concTbl" Visibility="Visible" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextAlignment="Justify" TextWrapping="Wrap" FontStretch="Normal" VerticalAlignment="Bottom" Height="150" Width="623" x:Name="concTbl" Visibility="Visible" FontSize="18"/>
     </Grid>
 </Window>

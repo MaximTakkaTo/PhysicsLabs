@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:PhysicsLabs.Labs"
         xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
         mc:Ignorable="d"
-         Title="Экспериментальное изучение закона сохранения механической энергии" Height="394.096" Width="669.017" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+         Title="Экспериментальное изучение закона сохранения механической энергии" Height="330" Width="669.017" x:Name="Window" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid x:Name="g">
-        <StackPanel HorizontalAlignment="Left" Height="159" Margin="248,30,0,0" VerticalAlignment="Top" Width="395">
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="54"/>
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula2" Height="54"/>
-            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula3" Height="54"/>
+        <StackPanel HorizontalAlignment="Left" Height="200" Margin="248,30,0,0" VerticalAlignment="Top" Width="395">
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula1" Height="66"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula2" Height="66"/>
+            <controls:FormulaControl Formula = "" VerticalAlignment="Top" Margin="0,0,0,0" x:Name="formula3" Height="66"/>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" Margin="248,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="112" Width="393" x:Name="concTbl" Visibility="Visible" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,0,0,-20" TextAlignment="Justify" TextWrapping="Wrap" FontStretch="Normal" VerticalAlignment="Bottom" Height="150" Width="623" x:Name="concTbl" Visibility="Visible" FontSize="18"/>
     </Grid>
 </Window>

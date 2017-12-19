@@ -57,6 +57,7 @@ namespace PhysicsLabs.Labs.ten.tenOne
 
                 Calc.Calcul(data, out T, out a1, out a2, out a3);
                 Calc.Out(data, T, a1, a2, a3, out cT, out cA1, out cA2, out cA3, out conc);
+                Window.Height += 100;
 
                 formula1.Formula = cT;
                 formula2.Formula = cA1;
@@ -100,6 +101,7 @@ namespace PhysicsLabs.Labs.ten.tenOne
             formula2.Formula = "";
             formula3.Formula = "";
             formula4.Formula = "";
+            Window.Height -= 100;
             btn[0].IsEnabled = true;
             btn[1].IsEnabled = false;
             btn[2].IsEnabled = true;
