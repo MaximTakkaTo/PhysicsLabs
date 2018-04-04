@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows;
+using System.IO;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Ph = PhysicsLabs.Labs.ten;
-using System.Windows.Threading;
 using System.Threading;
 
 namespace PhysicsLabs
@@ -11,15 +11,34 @@ namespace PhysicsLabs
     public partial class MainWindow : Window
     {
         public MainWindow(bool f)
-        { 
+        {
             InitializeComponent();
+            f1();
         }
 
         public MainWindow()
         {
             //Splash();
             InitializeComponent();
+            f1();
+
         }
+
+        public bool f1()
+        {
+            try
+            {
+                StreamReader sr = new StreamReader("userLabs.data");
+                return true;
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Файл пользовательких лабораторных работ не обнаружен.\nПроизведено автоматическое создание userLabs.data");
+                StreamWriter sw = new StreamWriter("userLabs.data");
+                return true;
+            }
+        }
+
 
         private bool Splash()
         {
@@ -93,7 +112,6 @@ namespace PhysicsLabs
                 LabCb.Items.Add("Изучение движения тел по окружности под действием силы упругости и тяжести.");
                 LabCb.Items.Add("Экспериментальное изучение закона сохранения механической энергии.");
                 LabCb.Items.Add("Изучение законов последовательного и параллельного соединений проводников.");
-                LabCb.Items.Add("Измерение ЭДС и внутреннего сопротивления источника тока.");
             }   
         }
 
@@ -118,7 +136,6 @@ namespace PhysicsLabs
                 this.Close();
                 tenThree.Show();
             }
-            
         }
 
         private void LabCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -127,6 +144,12 @@ namespace PhysicsLabs
                 Btn.IsEnabled = true;
             else
                 Btn.IsEnabled = false;
+        }
+
+        private void constrBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Konstructor kon = new Konstructor();
+            kon.Show();
         }
     }
 }

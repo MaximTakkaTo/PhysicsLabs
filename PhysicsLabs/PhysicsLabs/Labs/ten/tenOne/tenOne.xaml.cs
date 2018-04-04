@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-
 namespace PhysicsLabs.Labs.ten.tenOne
 {
     public partial class tenOne : Window
@@ -25,6 +24,7 @@ namespace PhysicsLabs.Labs.ten.tenOne
             btn[3].Click += refBtn_Click;
 
             reference();
+
         }
 
         private void reference()

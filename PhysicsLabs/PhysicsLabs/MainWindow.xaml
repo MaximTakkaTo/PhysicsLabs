@@ -23,7 +23,12 @@
 
         <Label Content="v0.7.1.0" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
         <Label Content="Astashkin2017©" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
-
         <Image Margin="9,10,10,266" Source="Pictures/Logo.png" Stretch="Fill"/>
+        <Button VerticalAlignment="Bottom"  HorizontalAlignment="Center" Width="200" Height="50" Margin="0,0,0,25" FontSize="15" x:Name="constrBtn" Click="constrBtn_Click">
+            <TextBlock Text="Пользовательские лабораторные"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       FontSize="18"/>
+        </Button>
     </Grid>
 </Window>

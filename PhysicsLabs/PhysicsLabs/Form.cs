@@ -1,13 +1,10 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace PhysicsLabs
 {
     public static class Form
     {
-        const double g = 10;
-
         public static void InBtn(Button[] btn, string[] bCont, Grid g ,int b) 
         {
             for (int i = 0; i < (btn.Length / 2); i++)
@@ -23,6 +20,7 @@ namespace PhysicsLabs
             }
 
             b = 138;
+
             for (int i = 2; i < btn.Length; i++)
             {
                 btn[i] = new Button();

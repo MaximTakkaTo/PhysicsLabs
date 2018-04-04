@@ -9,12 +9,21 @@ PhysicsLabs
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
+C:\Users\maksi\Desktop\Обработка данных для лабараторных работ\PhysicsLabs\PhysicsLabs\App.xaml
+5305827322
+
+141751035797
+15-604270600
+Konstructor.xaml;Labs\ten\tenThree\tenThree.xaml;Labs\ten\tenOne\tenOne.xaml;Labs\ten\tenTwo\tenTwo.xaml;MainWindow.xaml;
+=======
 C:\Users\astashkin\Desktop\Github\PhysicsLabs\PhysicsLabs\App.xaml
 4412251018
 
 161496373396
 15213373231
 Labs\ten\tenThree\tenThree.xaml;Labs\ten\tenOne\tenOne.xaml;Labs\ten\tenTwo\tenTwo.xaml;MainWindow.xaml;
+>>>>>>> 9f87b316988033dae7791b246f7e62014c7f3d54
 
-True
+False
 

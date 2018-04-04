@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using System;
+using System.Linq;
 using System.Windows.Input;
 
 namespace PhysicsLabs.Labs.ten.tenThree
@@ -15,8 +15,7 @@ namespace PhysicsLabs.Labs.ten.tenThree
 
         double screnHeight = SystemParameters.FullPrimaryScreenHeight;
         double screenWidth = SystemParameters.FullPrimaryScreenWidth;
-
-        double tbMar, lbMar, lbMar1;
+        double tbMar, lbMar, lbParlMar;
 
         public tenThree()
         {
@@ -31,7 +30,7 @@ namespace PhysicsLabs.Labs.ten.tenThree
             Form.InComp(tb2, lb2, cont2, hint2, Grid, 263, 235);
             tbMar = tb2[0].Margin.Top;
             lbMar = lb2[0].Margin.Top;
-            lbMar1 = parlLb.Margin.Top;
+            lbParlMar = parlLb.Margin.Top;
             reference();
 
             btn[0].Click += calcBtn_Click;
@@ -56,17 +55,16 @@ namespace PhysicsLabs.Labs.ten.tenThree
 
         private void calcBtn_Click(object sender, RoutedEventArgs e)
         {
-            int er1 = 0, er2= 0;
+            int er1 = 0, er2 = 0;
             string eror1, eror2;
 
             double[] data1 = new double[3];
             double[] data2 = new double[3];
             double pR1, pR2, pR, pU, pAtt1, pAtt2;
             double lR1, lR2, lR, lI, lAtt1, lAtt2;
-            
-            string pCR1, pCR2, pCR, pCU,pCAtt1;
-            string lCR1, lCR2, lCR3,lCR4, lCI, lCAtt1,conc;
 
+            string pCR1, pCR2, pCR, pCU, pCAtt1;
+            string lCR1, lCR2, lCR3, lCR4, lCI, lCAtt1, conc;
 
             Form.InData(tb1, lb1, data1, out eror1, out er1);
             Form.InData(tb2, lb2, data2, out eror2, out er2);
@@ -75,11 +73,38 @@ namespace PhysicsLabs.Labs.ten.tenThree
             if (er1 == 0 && er2 == 0)
             {
                 offComponents();
-                Calc.CalculPosl(data1, out pR1, out pR2, out pR,out pU,out pAtt1,out pAtt2);
+                Calc.CalculPosl(data1, out pR1, out pR2, out pR, out pU, out pAtt1, out pAtt2);
                 Calc.CalculParl(data2, out lR1, out lR2, out lR, out lI, out lAtt1, out lAtt2);
                 Calc.OutPosl(data1, pR1, pR2, pR, pU, pAtt1, pAtt2, out pCR1, out pCR2, out pCR, out pCU, out pCAtt1);
-                Calc.OutParl(data2, lR1, lR2, lR, lI, lAtt1, lAtt2 ,out lCR1, out lCR2, out lCR3, out lCR4, out lCI, out lCAtt1,out conc);
+                Calc.OutParl(data2, lR1, lR2, lR, lI, lAtt1, lAtt2, out lCR1, out lCR2, out lCR3, out lCR4, out lCI, out lCAtt1, out conc);
+                output(pCR1, pCR2, pCR, pCU, pCAtt1, lCR1, lCR2, lCR3, lCR4, lCI, lCAtt1, conc);
+            }
+            if (er1 != 0 || er2 != 0)
+            {
+                if (er1 != 0 && er2 == 0)
+                {
+                    eror2 = null;
+                    eror1 = "Для последовательного соединения :\n" + eror1;
+                }
 
+                else if (er2 != 0 && er1 == 0)
+                {
+                    eror1 = null;
+                    eror2 = "Для параллельного соединения :\n" + eror2;
+                }
+
+                else if (er1 != 0 && er2 != 0)
+                {
+                    eror1 = "Для последовательного соединения :\n" + eror1;
+                    eror2 = "\n\nДля параллельного соединения :\n" + eror2;
+                }
+
+                MessageBox.Show(eror1 + eror2);
+            }
+        }
+
+        private void output(string pCR1, string pCR2, string pCR, string pCU, string pCAtt1,string lCR1, string lCR2, string lCR3, string lCR4, string lCI, string lCAtt1, string conc)
+        {
                 formula1.Formula = pCR1;
                 formula2.Formula = pCR2;
                 formula3.Formula = pCR;
@@ -92,44 +117,9 @@ namespace PhysicsLabs.Labs.ten.tenThree
                 formula10.Formula = lCI;
                 formula11.Formula = lCAtt1;
                 concTbl.Text = conc;
-            }
-            if(er1 != 0 || er2 != 0)
-            {
-                if (er1 != 0 && er2 == 0)
-                {
-                    eror2 = null;
-                    eror1 = "Для последовательного соединения :\n" + eror1;
-                }
-                    
-                else if(er2 != 0 && er1 == 0)
-                {
-                    eror1 = null;
-                    eror2 = "Для параллельного соединения :\n" + eror2;
-                }
-                    
-                else if (er1 != 0 && er2 != 0)
-                {
-                    eror1 = "Для последовательного соединения :\n" + eror1;
-                    eror2 = "\n\nДля параллельного соединения :\n" + eror2;
-                }
-                    
-                MessageBox.Show(eror1 + eror2);
-            } 
         }
 
-        private void backBtn_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow mW = new MainWindow(true);
-            Form.Menu(mW, this);
-        }
-
-        private void chngBtn_Click(object sender, RoutedEventArgs e) =>
-            onComponents();
-
-        private void refBtn_Click(object sender,RoutedEventArgs e) =>
-            reference();
-
-        public void offComponents()
+        private void shiftDown()
         {
             this.Height += 245;
             this.Top = (screnHeight - this.Height) / 2;
@@ -146,9 +136,47 @@ namespace PhysicsLabs.Labs.ten.tenThree
                 lb.Margin = new Thickness(15, lbMar, 0, 0);
             }
 
-            lbMar1 += 45;
-            parlLb.Margin = new Thickness(5, lbMar1, 0, 0);
+            lbParlMar += 45;
+            parlLb.Margin = new Thickness(5, lbParlMar, 0, 0);
+        }
 
+        private void shiftUp()
+        {
+            this.Height -= 245;
+            this.Top = (screnHeight - this.Height) / 2;
+            this.Left = (screenWidth - this.Width) / 2;
+
+            foreach(Label lb in lb2.Reverse().ToArray() )
+            {
+                lbMar -= 45;
+                lb.Margin = new Thickness(15, lbMar, 0, 0);
+            }
+
+            foreach (TextBox tb in tb2.Reverse().ToArray())
+            {
+                tbMar -= 45;
+                tb.Margin = new Thickness(20, tbMar, 0, 0);
+            }
+
+            lbParlMar -= 45;
+            parlLb.Margin = new Thickness(5, lbParlMar, 0, 0);
+        }
+
+        private void backBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mW = new MainWindow(true);
+            Form.Menu(mW, this);
+        }
+
+        private void chngBtn_Click(object sender, RoutedEventArgs e) =>
+            onComponents();
+
+        private void refBtn_Click(object sender,RoutedEventArgs e) =>
+            reference();
+
+        public void offComponents()
+        {
+            shiftDown();
             for (int i = 0; i < tb1.Length; i++)
                 tb1[i].IsEnabled = false;
             for (int i = 0; i < tb2.Length; i++)
@@ -162,28 +190,12 @@ namespace PhysicsLabs.Labs.ten.tenThree
 
         public void onComponents()
         {
+            shiftUp();
+
             for (int i = 0; i < tb1.Length; i++)
                 tb1[i].IsEnabled = true;
             for (int i = 0; i < tb2.Length; i++)
                 tb2[i].IsEnabled = true;
-
-           for (int i = lb2.Length - 1 ; i >= 0; i--)
-           {
-                lbMar -= 45;
-                lb2[i].Margin = new Thickness(15, lbMar, 0, 0);
-           }
-
-            for (int i = tb2.Length - 1; i >= 0; i--)
-            {
-                tbMar -= 45;
-                tb2[i].Margin = new Thickness(20, tbMar, 0, 0);
-            }
-
-            lbMar1 -= 45;
-            parlLb.Margin = new Thickness(5, lbMar1, 0, 0);
-            this.Height -= 245;
-            this.Top = (screnHeight - this.Height) / 2;
-            this.Left = (screenWidth - this.Width) / 2;
 
             formula1.Formula = "";
             formula2.Formula = "";

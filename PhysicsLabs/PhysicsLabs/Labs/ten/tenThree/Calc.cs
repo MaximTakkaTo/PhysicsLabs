@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PhysicsLabs.Labs.ten.tenThree
+﻿namespace PhysicsLabs.Labs.ten.tenThree
 {
     static class Calc
     {
@@ -60,7 +54,7 @@ namespace PhysicsLabs.Labs.ten.tenThree
                 f2 = true;
             }
             else
-                cAtt = "\\frac{I_{1}}{U_{2}} = \\frac{I_{1}}{R_{2}} ; \\frac{" + data[0].ToString("0.###") + "}{" + data[1].ToString("0.###") + "} \\neq \\frac{" + R1.ToString("0.#######") + "}{" + R2.ToString("0.###") + "}";
+                cAtt = "\\frac{I_{1}}{I_{2}} = \\frac{R_{1}}{R_{2}} ; \\frac{" + data[0].ToString("0.###") + "}{" + data[1].ToString("0.###") + "} \\neq \\frac{" + R1.ToString("0.#######") + "}{" + R2.ToString("0.###") + "}";
             if (f1 && f2)
             {
                 conc = "Сравнивая полученные отношения , подтверждаем справедливость законов последовательного и параллельного соединения проводников.";

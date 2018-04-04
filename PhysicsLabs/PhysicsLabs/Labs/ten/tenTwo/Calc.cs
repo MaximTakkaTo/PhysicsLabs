@@ -4,7 +4,6 @@ namespace PhysicsLabs.Labs.ten.tenTwo
 {
     static class Calc
     {
-
         public static void Calcul(double[] data, out double h, out double Ep1, out double Ep2)
         {
             data[1] /= 100;
